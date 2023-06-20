@@ -114,7 +114,7 @@ const EditGpon = () => {
     const handleUpdate = async (event) => {
         event.preventDefault()
         try {
-            await fetch('http://localhost:4000/api/gpon', {
+            await fetch('https://10.81.170.247:4000/api/gpon', {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",

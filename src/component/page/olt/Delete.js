@@ -16,7 +16,7 @@ const Delete = ({ id, onDataUpdate, onPage, onLimit, onRow, onTotalpage }) => {
         }).then(async (result) => {
             if (result.isConfirmed) {
                 try {
-                    const res = await fetch(`http://localhost:4000/api/olt/${id}`, {
+                    const res = await fetch(`https://10.81.170.247:4000/api/olt/${id}`, {
                         method: "DELETE",
                         headers: {
                             "Content-Type": "application/json",
@@ -28,7 +28,7 @@ const Delete = ({ id, onDataUpdate, onPage, onLimit, onRow, onTotalpage }) => {
                     })
                     if (res.ok) {
                         const response = await res.json()
-                        await fetch('http://localhost:4000/api/olt', {
+                        await fetch('https://10.81.170.247:4000/api/olt', {
                             method: "GET",
                             headers: {
                                 "Content-Type": "application/json",

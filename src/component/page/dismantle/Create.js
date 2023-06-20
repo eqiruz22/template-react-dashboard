@@ -18,7 +18,7 @@ const Create = ({ onDataUpdate, onPage, onLimit, onRow, onTotalpage }) => {
         setLoading(true)
         setBtnLoading(true)
         try {
-            await fetch('http://localhost:4000/api/costumer-list', {
+            await fetch('https://10.81.170.247:4000/api/costumer-list', {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -43,7 +43,7 @@ const Create = ({ onDataUpdate, onPage, onLimit, onRow, onTotalpage }) => {
     const handleCreate = async (event) => {
         event.preventDefault()
         try {
-            const res = await fetch('http://localhost:4000/api/dismantle', {
+            const res = await fetch('https://10.81.170.247:4000/api/dismantle', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -57,7 +57,7 @@ const Create = ({ onDataUpdate, onPage, onLimit, onRow, onTotalpage }) => {
             })
             if (res.ok) {
                 const response = await res.json()
-                await fetch('http://localhost:4000/api/dismantle', {
+                await fetch('https://10.81.170.247:4000/api/dismantle', {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",

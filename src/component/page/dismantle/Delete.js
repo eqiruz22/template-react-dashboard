@@ -17,7 +17,7 @@ const Delete = ({ id, onDataUpdate, onPage, onLimit, onRow, onTotalpage }) => {
         }).then(async (result) => {
             if (result.isConfirmed) {
                 try {
-                    const res = await fetch(`http://localhost:4000/api/dismantle/${id}`, {
+                    const res = await fetch(`https://10.81.170.247:4000/api/dismantle/${id}`, {
                         method: "DELETE",
                         headers: {
                             "Content-Type": "application/json",
@@ -30,7 +30,7 @@ const Delete = ({ id, onDataUpdate, onPage, onLimit, onRow, onTotalpage }) => {
                     if (res.ok) {
                         const response = await res.json()
                         console.log(response)
-                        await fetch('http://localhost:4000/api/dismantle', {
+                        await fetch('https://10.81.170.247:4000/api/dismantle', {
                             method: "GET",
                             headers: {
                                 "Content-Type": "application/json",

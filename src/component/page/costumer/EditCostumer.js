@@ -75,7 +75,7 @@ const EditCostumer = () => {
     const handleSubmit = async (event) => {
         event.preventDefault()
         try {
-            await fetch('http://localhost:4000/api/costumer', {
+            await fetch('https://10.81.170.247:4000/api/costumer', {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",

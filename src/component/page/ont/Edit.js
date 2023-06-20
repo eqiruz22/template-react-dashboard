@@ -14,7 +14,7 @@ const Edit = ({ id, onDataUpdate, onPage, onLimit, onRow, onTotalpage }) => {
     const { user } = useAuthContext()
     const getCostumerList = async () => {
         try {
-            await fetch('http://localhost:4000/api/costumer-list', {
+            await fetch('https://10.81.170.247:4000/api/costumer-list', {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -34,7 +34,7 @@ const Edit = ({ id, onDataUpdate, onPage, onLimit, onRow, onTotalpage }) => {
     }
     const getOntDetail = async () => {
         try {
-            await fetch(`http://localhost:4000/api/ont-ip?ip=${id}`, {
+            await fetch(`https://10.81.170.247:4000/api/ont-ip?ip=${id}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -80,7 +80,7 @@ const Edit = ({ id, onDataUpdate, onPage, onLimit, onRow, onTotalpage }) => {
     const handleSubmit = async (event) => {
         event.preventDefault()
         try {
-            const res = await fetch('http://localhost:4000/api/ont', {
+            const res = await fetch('https://10.81.170.247:4000/api/ont', {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",
@@ -97,7 +97,7 @@ const Edit = ({ id, onDataUpdate, onPage, onLimit, onRow, onTotalpage }) => {
             const response = await res.json()
             console.log(response)
             if (res.ok) {
-                await fetch('http://localhost:4000/api/ont', {
+                await fetch('https://10.81.170.247:4000/api/ont', {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",

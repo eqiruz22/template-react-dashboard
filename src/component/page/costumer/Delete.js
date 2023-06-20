@@ -17,7 +17,7 @@ export const Delete = ({ id, onDataUpdate, onPage, onLimit, onRow, onTotalpage }
         }).then(async (result) => {
             if (result.isConfirmed) {
                 try {
-                    const res = await fetch(`http://localhost:4000/api/costumer/${id}`, {
+                    const res = await fetch(`https://10.81.170.247:4000/api/costumer/${id}`, {
                         method: "DELETE",
                         headers: {
                             "Content-Type": "application/json",
@@ -31,7 +31,7 @@ export const Delete = ({ id, onDataUpdate, onPage, onLimit, onRow, onTotalpage }
                     const response = await res.json()
                     console.log(response)
                     if (res.ok) {
-                        await fetch('http://localhost:4000/api/costumer', {
+                        await fetch('https://10.81.170.247:4000/api/costumer', {
                             method: "GET",
                             headers: {
                                 "Content-Type": "application/json",

@@ -70,7 +70,7 @@ const Edit = ({ id, onDataUpdate, onPage, onLimit, onRow, onTotalpage }) => {
     const handleUpdate = async (event) => {
         event.preventDefault()
         try {
-            const res = await fetch('http://localhost:4000/api/dismantle', {
+            const res = await fetch('https://10.81.170.247:4000/api/dismantle', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -85,7 +85,7 @@ const Edit = ({ id, onDataUpdate, onPage, onLimit, onRow, onTotalpage }) => {
             })
             if (res.ok) {
                 const response = await res.json()
-                await fetch('http://localhost:4000/api/dismantle', {
+                await fetch('https://10.81.170.247:4000/api/dismantle', {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",

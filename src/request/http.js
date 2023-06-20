@@ -3,7 +3,7 @@ import axios from "axios"
 
 export const ipOnt = async (setOnt, user, keyword, page, limit, setPage, setLimit, setRows, setPages) => {
     try {
-        await fetch(`http://localhost:4000/api/ont?query=${keyword}&page=${page}&limit=${limit}`, {
+        await fetch(`https://10.81.170.247:4000/api/ont?query=${keyword}&page=${page}&limit=${limit}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -26,7 +26,7 @@ export const ipOnt = async (setOnt, user, keyword, page, limit, setPage, setLimi
 
 export const getOlt = async (setOlt, user, keyword, page, limit, setPage, setLimit, setRows, setPages) => {
     try {
-        await fetch(`http://localhost:4000/api/olt?query=${keyword}&page=${page}&limit=${limit}`, {
+        await fetch(`https://10.81.170.247:4000/api/olt?query=${keyword}&page=${page}&limit=${limit}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -48,7 +48,7 @@ export const getOlt = async (setOlt, user, keyword, page, limit, setPage, setLim
 
 export const getOltById = async (id, setOlt, setHostname, setCapacity, setStatus, setIp, setSite, setDesc, user) => {
     try {
-        await fetch(`http://localhost:4000/api/olt/${id}`, {
+        await fetch(`https://10.81.170.247:4000/api/olt/${id}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -72,7 +72,7 @@ export const getOltById = async (id, setOlt, setHostname, setCapacity, setStatus
 
 export const getOltSelect = async (setOlt, user) => {
     try {
-        await fetch('http://localhost:4000/api/olt', {
+        await fetch('https://10.81.170.247:4000/api/olt', {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -91,7 +91,7 @@ export const getOltSelect = async (setOlt, user) => {
 
 export const getPon = async (setPon, user, keyword, page, limit, setPage, setLimit, setRows, setPages) => {
     try {
-        await fetch(`http://localhost:4000/api/pon?query=${keyword}&page=${page}&limit=${limit}`, {
+        await fetch(`https://10.81.170.247:4000/api/pon?query=${keyword}&page=${page}&limit=${limit}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -113,7 +113,7 @@ export const getPon = async (setPon, user, keyword, page, limit, setPage, setLim
 
 export const getPonById = async (setPon, setFsp, setCapacity, setStatus, setAllocation, setOltId, setDesc, setSplitter, user) => {
     try {
-        await fetch('http://localhost:4000/api/pon', {
+        await fetch('https://10.81.170.247:4000/api/pon', {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -138,7 +138,7 @@ export const getPonById = async (setPon, setFsp, setCapacity, setStatus, setAllo
 
 export const getPonSelect = async (setPonOpt, user) => {
     try {
-        await fetch('http://localhost:4000/api/pon-select', {
+        await fetch('https://10.81.170.247:4000/api/pon-select', {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -157,7 +157,7 @@ export const getPonSelect = async (setPonOpt, user) => {
 
 export const getOdp = async (setOdp, user, keyword, page, limit, setPage, setLimit, setRows, setPages) => {
     try {
-        await fetch(`http://localhost:4000/api/odp?query=${keyword}&page=${page}&limit=${limit}`, {
+        await fetch(`https://10.81.170.247:4000/api/odp?query=${keyword}&page=${page}&limit=${limit}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -179,7 +179,7 @@ export const getOdp = async (setOdp, user, keyword, page, limit, setPage, setLim
 
 export const getOdpById = async (id, setOdp, setType, setStatus, setUplink, setPort, setCapacity, setLocation, setDesc, setPon, user) => {
     try {
-        await fetch(`http://localhost:4000/api/odp/${id}`, {
+        await fetch(`https://10.81.170.247:4000/api/odp/${id}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -205,7 +205,7 @@ export const getOdpById = async (id, setOdp, setType, setStatus, setUplink, setP
 
 export const getOdpSelect = async (setOdpOpt, user) => {
     try {
-        await fetch('http://localhost:4000/api/odp-select', {
+        await fetch('https://10.81.170.247:4000/api/odp-select', {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -224,7 +224,7 @@ export const getOdpSelect = async (setOdpOpt, user) => {
 
 export const getGpon = async (setGpon, user, keyword, page, limit, setPage, setLimit, setRows, setPages) => {
     try {
-        await fetch(`http://localhost:4000/api/gpon?query=${keyword}&page=${page}&limit=${limit}`, {
+        await fetch(`https://10.81.170.247:4000/api/gpon?query=${keyword}&page=${page}&limit=${limit}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -246,7 +246,7 @@ export const getGpon = async (setGpon, user, keyword, page, limit, setPage, setL
 
 export const getGponById = async (id, setGpon, setPort, setLabel, setPath, setStatus, setPon, setOdp, user) => {
     try {
-        await fetch(`http://localhost:4000/api/gpon-id?id=${id}`, {
+        await fetch(`https://10.81.170.247:4000/api/gpon-id?id=${id}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -270,7 +270,7 @@ export const getGponById = async (id, setGpon, setPort, setLabel, setPath, setSt
 
 export const getCostumer = async (setCostumer, user, keyword, page, limit, setPage, setLimit, setRows, setPages) => {
     try {
-        await fetch(`http://localhost:4000/api/costumer?query=${keyword}&page=${page}&limit=${limit}`, {
+        await fetch(`https://10.81.170.247:4000/api/costumer?query=${keyword}&page=${page}&limit=${limit}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -292,7 +292,7 @@ export const getCostumer = async (setCostumer, user, keyword, page, limit, setPa
 
 export const gponSelect = async (setGponOpt, user) => {
     try {
-        await fetch('http://localhost:4000/api/gpon-select', {
+        await fetch('https://10.81.170.247:4000/api/gpon-select', {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -311,7 +311,7 @@ export const gponSelect = async (setGponOpt, user) => {
 
 export const getOntSelect = async (setIpOpt, user) => {
     try {
-        await fetch('http://localhost:4000/api/ont-idle', {
+        await fetch('https://10.81.170.247:4000/api/ont-idle', {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -331,7 +331,7 @@ export const getCostumerById = async (id, setBsms, setType, setStatus, setNama, 
 
     try {
 
-        await fetch(`http://localhost:4000/api/costumer/${id}`, {
+        await fetch(`https://10.81.170.247:4000/api/costumer/${id}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -357,7 +357,7 @@ export const getCostumerById = async (id, setBsms, setType, setStatus, setNama, 
 
 export const getLog = async (user, keyword, page, limit, setPage, setLimit, setRows, setPages, setLog) => {
     try {
-        await fetch(`http://localhost:4000/api/history?query=${keyword}&page=${page}&limit=${limit}`, {
+        await fetch(`https://10.81.170.247:4000/api/history?query=${keyword}&page=${page}&limit=${limit}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -379,7 +379,7 @@ export const getLog = async (user, keyword, page, limit, setPage, setLimit, setR
 
 export const getDismantle = async (user, keyword, page, limit, setPage, setLimit, setRows, setPages, setDismantle) => {
     try {
-        await fetch(`http://localhost:4000/api/dismantle?query=${keyword}&page=${page}&limit=${limit}`, {
+        await fetch(`https://10.81.170.247:4000/api/dismantle?query=${keyword}&page=${page}&limit=${limit}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -401,7 +401,7 @@ export const getDismantle = async (user, keyword, page, limit, setPage, setLimit
 
 export const getInstallation = async (user, keyword, page, limit, setInstallation, setPage, setLimit, setRows, setPages) => {
     try {
-        await fetch(`http://localhost:4000/api/installation?query=${keyword}&page=${page}&limit=${limit}`, {
+        await fetch(`https://10.81.170.247:4000/api/installation?query=${keyword}&page=${page}&limit=${limit}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -423,7 +423,7 @@ export const getInstallation = async (user, keyword, page, limit, setInstallatio
 
 export const getBsmsList = async (user, setList) => {
     try {
-        const response = await axios.get('http://localhost:4000/api/costumer-list', {
+        const response = await axios.get('https://10.81.170.247:4000/api/costumer-list', {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${user['token']}`
@@ -438,7 +438,7 @@ export const getBsmsList = async (user, setList) => {
 
 export const getOntList = async (user, setListOnt) => {
     try {
-        const response = await axios.get('http://localhost:4000/api/ont-list', {
+        const response = await axios.get('https://10.81.170.247:4000/api/ont-list', {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${user['token']}`
@@ -453,7 +453,7 @@ export const getOntList = async (user, setListOnt) => {
 
 export const getInstallationById = async (user, setBsms, setStatus, setWo, setCostumer, setAddress, setPack, setTgl, setPic, setGpon, setSn, setIp, setOntuser, setSnstb, setMac, setUsername, setPassword, setPerangkat, setOldip, setDesc, id) => {
     try {
-        const response = await axios.get(`http://localhost:4000/api/installation/${id}`, {
+        const response = await axios.get(`https://10.81.170.247:4000/api/installation/${id}`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${user['token']}`

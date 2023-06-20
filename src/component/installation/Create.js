@@ -72,7 +72,7 @@ export const Create = () => {
     const handleSubmit = async (event) => {
         event.preventDefault()
         try {
-            const res = await fetch('http://localhost:4000/api/installation', {
+            const res = await fetch('https://10.81.170.247:4000/api/installation', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

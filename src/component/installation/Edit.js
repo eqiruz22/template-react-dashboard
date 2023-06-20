@@ -38,7 +38,7 @@ export const Edit = () => {
             if (user && user.token) {
                 const getBsmsList = async () => {
                     try {
-                        const response = await axios.get('http://localhost:4000/api/costumer-list', {
+                        const response = await axios.get('https://10.81.170.247:4000/api/costumer-list', {
                             headers: {
                                 "Content-Type": "application/json",
                                 "Authorization": `Bearer ${user.token}`
@@ -81,7 +81,7 @@ export const Edit = () => {
     const handleSubmit = async (event) => {
         event.preventDefault()
         try {
-            const res = await fetch('http://localhost:4000/api/installation', {
+            const res = await fetch('https://10.81.170.247:4000/api/installation', {
                 method: "PATCH",
                 headers: {
                     'Content-Type': 'application/json',
